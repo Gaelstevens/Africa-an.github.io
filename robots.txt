@@ -1,0 +1,31 @@
+# Autoriser tous les robots à explorer l'intégralité du site
+User-agent: *
+Disallow:
+
+# Autoriser le crawl des fichiers CSS et JS pour un meilleur rendu SEO
+Allow: /*.css$
+Allow: /*.js$
+
+# Spécifier l'emplacement du sitemap pour une meilleure indexation
+Sitemap: https://africa-an.netlify.app/sitemap.xml
+
+# Empêcher l'indexation de pages potentiellement inutiles
+Disallow: /admin/
+Disallow: /login/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /wp-admin/  
+
+# Éviter le crawl des paramètres d'URL inutiles
+Disallow: /*?sessionid=
+Disallow: /*?tracking=
+
+# Empêcher le crawl des fichiers sensibles
+Disallow: /*.pdf$
+Disallow: /*.zip$
+Disallow: /*.sql$
+Disallow: /*.xml$
+
+# Permettre aux robots d'explorer les images et les ressources utiles
+Allow: /images/
+Allow: /uploads/
